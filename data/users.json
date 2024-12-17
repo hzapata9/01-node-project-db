@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "email": "test1-update@domain.com",
+    "password": "123123-update-333"
+  },
+  {
+    "id": "2",
+    "email": "test123@gmail.com",
+    "password": "222222"
+  },
+  {
+    "id": "100",
+    "email": "test2@domain.com",
+    "password": "123123"
+  },
+  {
+    "id": "100",
+    "email": "hzapata@domain.com",
+    "password": "999999999"
+  },
+  {
+    "id": "zl2Wwcj_ZWymkY2fMOifO",
+    "email": "mcejas@domain.com",
+    "password": "999999999"
+  },
+  {
+    "id": "xXBOGtnlIr1wshV1tAWGc",
+    "email": "gcatrile@domain.com",
+    "password": "$2a$10$fkf3aJTrFQ1/Genc58IIBerdN0Yn879Z.lj20eFKqb/7zlNXjt1.i"
+  },
+  {
+    "id": "ctB1xakkuzL-iO9lOzubP",
+    "email": "pepejuan@domain.com",
+    "password": "$2a$10$L5jiNsQCZiMNoqAPmST1Su7avm2IdJBZkvqGY4w9RMXoMswMtZR0K"
+  }
+]
