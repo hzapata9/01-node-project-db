@@ -5,9 +5,11 @@ import bcrypt from "bcryptjs"
 import { generateAccessToken } from "../utils/auth.utill";
 import { HttpError } from "../utils/httpError.util";
 
+const getAllUsers = async() => {
+    return userService.getAllUsers();
+}
 
 const loginWithEmailAndPassword = async(email: string, password: string) => {
-
     // 1. verificar que existe el usuario
     const user = await userService.getUserByEmail(email);
     if(!user) {
@@ -37,4 +39,5 @@ const registerWithEmailAndPassword = async(email: string, password: string) => {
 export const authService = {
     loginWithEmailAndPassword,
     registerWithEmailAndPassword,
+    getAllUsers,
 }

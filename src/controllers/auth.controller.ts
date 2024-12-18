@@ -7,9 +7,10 @@ import { nextTick } from "process";
 const login = async(req: Request, res: Response, next: NextFunction) => {
     try {
         const { email, password } = req.body;
-        const token = authService.loginWithEmailAndPassword(email, password);
-        
-        res.json({});
+        const token = await authService.loginWithEmailAndPassword(email, password);
+        console.log("TOKEN: " , token);
+        //res.json({});
+        res.status(200).json({ token });
     } catch(error) {
         next(error);
     }

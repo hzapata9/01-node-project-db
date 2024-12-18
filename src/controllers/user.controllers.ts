@@ -31,7 +31,7 @@ const getUser = async(req: Request, res: Response) => {
 const createUser = async(req: Request, res: Response) => {
     const {email, password} = req.body;
     try {
-        await userService.createUser(email, password);
+        await userService.createUserWithEmailAndPassword(email, password);
         res.status(201).json( {message: "User created!"} );
     } catch(error) {
         console.log(error);
@@ -42,7 +42,7 @@ const createUser = async(req: Request, res: Response) => {
         }
     }
 };
-
+/*
 const deleteUser = async(req: Request, res: Response) => {
     const { id } = req.params;
     try {
@@ -72,11 +72,11 @@ const updateUser = async(req: Request, res: Response) => {
         }
     }
 };
-
+*/
 export const userController = {
     getUsers,
     getUser,
     createUser,
-    deleteUser,
-    updateUser,
+    //deleteUser,
+    //updateUser,
 }

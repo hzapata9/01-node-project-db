@@ -3,12 +3,11 @@ import jwt from "jsonwebtoken"
 import { verifyAccessToken } from "../utils/auth.utill";
 
 export const verifyToken = async(req: Request, res: Response, next: NextFunction) => {
-    console.log("Paso por aqui");
+    console.log("Paso por aqui 'jwt.middleware.ts' ");
     
     const authHeader = req.headers.authorization;
     if(!authHeader) {
-        res.status(401).json("NO Bearer Header!");
-        return;
+        return res.status(401).json("NO Bearer Header!");
     }
 
     const token = authHeader.split(" ")[1];

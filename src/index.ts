@@ -20,7 +20,7 @@ app.use(httpErrorHandle);
 const main = async() => {
     try {
         const { rows } = await pool.query("SELECT NOW()");
-        console.log(rows, "DB Conected \n");
+        console.log(rows, " ===> DB Conected \n");
         app.listen(3000, () => {
             console.log("Server is running on Port:" + port);
         });

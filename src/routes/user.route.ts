@@ -16,10 +16,10 @@ router.get("/:id", userController.getUser);
 router.post("/", userController.createUser);
 
 // eliminar un usuario por id: DELETE /api/v1/users/:id 204
-router.delete("/:id", userController.deleteUser);
+//router.delete("/:id", userController.deleteUser);
 
 // actualizar un usuario por id: PUT /api/v1/users/:id 200
-router.put("/:id", userController.updateUser);
+//router.put("/:id", userController.updateUser);
 
 
 export default router;

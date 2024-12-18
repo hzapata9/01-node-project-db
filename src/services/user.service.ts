@@ -24,14 +24,12 @@ const createUserWithEmailAndPassword = async(
     return newUser;
 };
 
-
-
-/*
 const getAllUsers = async() => {
-    const users = await UserModel.readUsers();
+    const users = await UserModel.findAll();
     return users;
 };
 
+/*
 const getUser = async() => {};
 
 const getUserById = async(id: string) => {
@@ -102,4 +100,5 @@ export const userService = {
     */
     createUserWithEmailAndPassword,
     getUserByEmail,
+    getAllUsers,
 }
