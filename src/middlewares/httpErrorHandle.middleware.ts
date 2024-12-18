@@ -8,7 +8,7 @@ export const httpErrorHandle = (
     res: Response,
     next: NextFunction
 ) => {
-    console.log(error);
+    console.log("HANDLE: " , error);
     logger.error(error.message);
     if (error instanceof HttpError) {
         res.status(error.code).json({ error: error.message});

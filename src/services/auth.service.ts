@@ -17,7 +17,7 @@ const loginWithEmailAndPassword = async(email: string, password: string) => {
     // 2. comparar los hash de password
     const isValidPassword = await bcrypt.compare(password, user.password);
     if(!isValidPassword) {
-        throw new Error("Password incorrect! \n");
+        throw new HttpError("Password incorrect! \n", 500);
     }
 
     // 3. generar el token
