@@ -40,14 +40,15 @@ const createUser = async(req: Request, res: Response) => {
         } else {
             res.status(500).json({message: "Internal server error!"});
         }
+        
     }
 };
-/*
+
 const deleteUser = async(req: Request, res: Response) => {
     const { id } = req.params;
     try {
-        await userService.deleteUser(id);
-        res.status(204).json();
+        const user = await userService.deleteUserById(id);
+        res.json(user);
     } catch(error) {
         console.log(error);
         if(error instanceof Error) {
@@ -62,7 +63,8 @@ const updateUser = async(req: Request, res: Response) => {
     const { id } = req.params;
     const { email, password } = req.body;
     try {
-        await userService.updateUser(id, email, password);
+        const user = await userService.updateUserById(id, email, password);
+        res.json(user);
     } catch(error) {
         console.log(error);
         if(error instanceof Error) {
@@ -72,11 +74,11 @@ const updateUser = async(req: Request, res: Response) => {
         }
     }
 };
-*/
+
 export const userController = {
     getUsers,
     getUser,
     createUser,
-    //deleteUser,
-    //updateUser,
+    deleteUser,
+    updateUser,
 }
