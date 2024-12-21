@@ -7,7 +7,7 @@ const router: Router = Router();
 // path: /api/v1/users
 
 // leer usuarios
-router.get("/", verifyToken, userController.getUsers);
+router.get("/", userController.getUsers);
 
 // leer unico usuario
 router.get("/:id", userController.getUser);
